@@ -1,0 +1,27 @@
+#footer #btn-view-more {
+	font-size: 0;
+	border: 0;
+}
+body #footer #btn-view-more {
+	display: inline-block;
+	width: 178px;
+	height: 50px;
+	background: url(https://cdn.attractt.com/consumers/baskin/img/default.png) 0 0 no-repeat;
+	background-size:178px 50px;
+}
+body #footer #btn-view-more:hover {
+	background: url(https://cdn.attractt.com/consumers/baskin/img/hover.png) 0 0 no-repeat;
+	background-size:178px 50px;
+}
+
+body[mobile=true] #footer #btn-view-more {
+	width: 134px;
+	height: 34px;
+	background: url(https://cdn.attractt.com/consumers/baskin/img/default.png) 0 0 no-repeat;
+	background-size:134px 34px;
+}
+
+body[mobile=true] #footer #btn-view-more:hover {
+	background: url(https://cdn.attractt.com/consumers/baskin/img/hover.png) 0 0 no-repeat;	
+	background-size:134px 34px;
+}

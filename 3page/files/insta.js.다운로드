@@ -1,0 +1,71 @@
+
+$(window).load(function() {
+	getInstaFeeds();
+});		
+
+	//배스킨라빈스 인스타그램 연동 시작
+
+	function getInstaFeeds(){
+
+			//clident ID = a3ed757d31434da8bcb696752cc736eb
+			//https://api.instagram.com/oauth/authorize/?client_id=a3ed757d31434da8bcb696752cc736eb&redirect_uri=http://www.baskinrobbins.co.kr/&response_type=token
+			var accessToken ="1535227389.a3ed757.9a46150d08a64e0dbefbb09a06bdc89d";
+
+			$.ajax({
+				type: "GET",
+				dataType: "jsonp",
+				cache: false,
+				async:false,
+				url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + accessToken,
+				success: function(response){
+					postInstaFeeds(response);
+				}
+			});
+		}
+
+
+		//인스타그램 데이터 관련 로직 
+		function postInstaFeeds(response){
+			var instaHTML = "";
+			var instaPopHTML = "";
+			var listCount = 0;
+			var instaData = response.data;
+			// console.log(instaData);
+			
+
+			for(var i = 0 ; i < instaData.length; i++){
+				var likeCount = instaData[i].likes.count;														//인스타그램 좋아요 수
+				var comentCount = instaData[i].comments.count;									//인스타그램 코멘트 수
+				var thumImages = instaData[i].images.standard_resolution.url;			//썸네일 이미지
+				var link = instaData[i].link;																		//링크 url
+
+				//var id = instaData[i].created_time;
+				//var date = new Date(parseInt(instaData[i].created_time) * 1000);												//우측 상단 날짜
+				//var postedTime = date.getFullYear()+'.'+(date.getMonth() + 1)+'.'+date.getDate();			//우측 상단 날짜
+				//var text = instaData[i].caption.text.replace(/\n/g, '<br>'); //우측 하단 텍스트 영역
+
+				
+
+				//내용중에 해시태그가 #순천만 이면 숨김 
+				//if(text.indexOf("#순천만") > -1){
+				//	continue;
+				//}
+
+				if(listCount  < 4){
+					instaHTML += "	<li class='ig-item'>																																											";
+					instaHTML += "		<a href='" +link+ "' class='ig-item-a' target='_blank' title='Show More'>																					";
+					instaHTML += "			<div class='ig-thumb'><img src='"+thumImages+"' alt='thumb'></div>																					";
+					instaHTML += "			<div class='ig-more'>																																								";
+					instaHTML += "				<span class='ig-btn'>Show More</span>																															";
+					instaHTML += "				<span class='ig-num'>																																							";
+					instaHTML += "					<span class='ig-icon ig-like'>"+likeCount+"</span><span class='ig-icon ig-comments'>"+comentCount+"</span>		";
+					instaHTML += "				</span>																																												";
+					instaHTML += "			</div>																																														";
+					instaHTML += "		</a>																																																";
+					instaHTML += "	</li>																																																	";
+					listCount++;
+				}
+			}
+			
+			$('.sns_wrap').append(instaHTML);
+		}

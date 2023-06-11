@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>배스킨라빈스</title>
+	<link rel="stylesheet" href="assets/css/baskinrobbins.css" media="all" type="text/css"/>
+<style>
+/*header*/
+#header {min-width:1200px; border-top:3px solid #ff7c98; border-bottom:1px solid #3f291a; background:url(assets/images/common/bg_header.gif) 50% 0 repeat-x;}
+#header .logo a {display:block; width:100%; height:100%; background:url(assets/images/common/logo_baskinrobbins.png) no-repeat; text-indent:-9999em;}
+#header .etc .search a {display:inline-block; width:54px; height:54px; background:url(assets/images/common/icon_search.png) no-repeat; text-indent:-9999em;}
+#header .member span {display:block; height:46px; background:url(assets/images/common/gnb_menu.png) no-repeat; text-indent:-9999em;}
+#gnb .gnb_main span {display:block; height:46px; background:url(assets/images/common/gnb_menu.png) no-repeat; text-indent:-9999em; line-height:46px;}
+#gnb .gnb_bg div {width:1200px; height:204px; margin:0 auto; background:url(assets/images/common/img_happypoint_app.jpg) no-repeat 0 65px;}
+#br_flavor_month {}
+#flavoer_wrap {overflow:hidden; position:relative; padding-bottom:0px !important; min-width:1200px;}
+#flavoer_wrap section {position:relative;  width:100%; height:796px; background-position:50% 0; line-height:0px; letter-spacing:0px;}
+#flavoer_wrap .in_wrap { position:absolute; left:50%; top:0px; z-index:11; width:100%; max-width:1200px;min-width:1200px;height:100%; margin-left:-600px;}
+#flavoer_wrap nav {position:relative;width:100%; max-width:1100px; margin:0px auto;}
+#flavoer_wrap nav ul {position:absolute; top:290px; right:-60px; z-index:50; }
+#flavoer_wrap nav li {text-align:right;}
+#flavoer_wrap nav li a{ display:inline-block; overflow:hidden; position:relative;width:43px; height:43px; border-width: 1px; border-color:rgba(0, 20, 76, 0.5); border-style: solid; background-color:rgba(255, 255, 255, 0.5); border-radius:24px;  margin-bottom:7px; font-size:0px; text-align:left; line-height:20px;  -webkit-box-sizing: border-box; -moz-box-sizing: border-box;  box-sizing: border-box;    -webkit-transition: all .2s ease;
+            transition: all .2s ease;}
+#flavoer_wrap nav li a.on {border-color:#00144c; background-color:#fff;}
+#flavoer_wrap nav li a .icon {width:42px;}
+#flavoer_wrap nav li a.btn1:hover,
+#flavoer_wrap nav li a.btn1.on.active {width:147px; }
+#flavoer_wrap nav li a.btn1:hover:after,
+#flavoer_wrap nav li a.btn1.on.active:after {display:block; position:absolute; top:0px; left:0px; z-index:9;width:147px; height:42px; background-image:url('assets/images/flavoer/211231/nav_01_on.png'); clear:both;content:'';}
+#flavoer_wrap nav li a.btn2:hover,
+#flavoer_wrap nav li a.btn2.on.active {width:147px; }
+#flavoer_wrap nav li a.btn2:hover:after,
+#flavoer_wrap nav li a.btn2.on.active:after {display:block; position:absolute; top:0px; left:0px; z-index:9;width:147px; height:42px; background-image:url('assets/images/flavoer/211231/nav_02_on.png'); clear:both;content:'';}
+#flavoer_wrap nav li a.btn3:hover,
+#flavoer_wrap nav li a.btn3.on.active {width:147px; }
+#flavoer_wrap nav li a.btn3:hover:after,
+#flavoer_wrap nav li a.btn3.on.active:after {display:block; position:absolute; top:0px; left:0px; z-index:9;width:147px; height:42px; background-image:url('assets/images/flavoer/211231/nav_03_on.png'); clear:both;content:'';}
+#flavoer_wrap nav li a.btn4:hover,
+#flavoer_wrap nav li a.btn4.on.active {width:147px; }
+#flavoer_wrap nav li a.btn4:hover:after,
+#flavoer_wrap nav li a.btn4.on.active:after {display:block; position:absolute; top:0px; left:0px; z-index:9;width:147px; height:42px; background-image:url('assets/images/flavoer/211231/nav_04_on.png'); clear:both;content:'';}
+/*area1*/
+#flavoer_wrap #area1 {height: 795px; background:url('assets/images/flavoer/211231/flavor_img_1.png') center top repeat-x;}
+#flavoer_wrap #area1 .dduk {position: absolute; left: 384px; top: 0; z-index: 11;}
+#flavoer_wrap #area1 .img_1 {position:absolute; top:40px; left:200px; z-index:10;}
+#flavoer_wrap #area1 .img_1 img {position:absolute; top:0px; left:0px; visibility:hidden;}
+#flavoer_wrap #area1 .img_2 {position:absolute; top:255px; left:336px; height: 540px; z-index:9; overflow: hidden;}
+#flavoer_wrap #area1 .img_3 {position:absolute; left:-115px; margin-top: 150px;
+            -webkit-animation: ov_move4 3s infinite;
+            -moz-animation: ov_move4 3s infinite;
+            -o-animation: ov_move4 3s infinite;
+            animation: ov_move4 3s infinite;
+}
+@keyframes ov_move4 {
+	0% {top:115px;}
+    25% {top:110px;}
+    50% {top:120px;}
+    75% {top:110px;}
+    100% {top:115px;}
+}
+#flavoer_wrap #area1 .img_4 {
+	position:absolute; top:0; left:-245px; z-index:9; margin-top:-245px;
+    -webkit-animation: ov_move 2s infinite;
+    -moz-animation: ov_move 2s infinite;
+    -o-animation: ov_move 2s infinite;
+    animation: ov_move 2s infinite;
+}
+@keyframes ov_move {
+	0% {top:530px;}
+    25% {top:535px;}
+    50% {top:530px;}
+    75% {top:535px;}
+    100% {top:530px;}
+}
+#flavoer_wrap #area1 .img_5 {
+	position:absolute; top:-5px; right:-230px; z-index:9; margin-top: 65px;
+    -webkit-animation: ov_move5 2s infinite;
+    -moz-animation: ov_move5 2s infinite;
+    -o-animation: ov_move5 2s infinite;
+    animation: ov_move5 2s infinite;
+}
+@keyframes ov_move5 {
+	0% {top:-5px;}
+    25% {top:0px;}
+    50% {top:-10px;}
+    75% {top:0px;}
+    100% {top:-5px;}
+}
+#flavoer_wrap #area1 .material {position:absolute; top:338px; left:237px; z-index:10;}
+/*area2*/
+#flavoer_wrap #area2 .img_1 {position:absolute; top:0; left:389px; z-index:1000;}
+#flavoer_wrap #area2 .img_1 img {position:absolute; top:0px; left:0px;}
+.show{visibility:visible !important;}
+#flavoer_wrap #area2 {height:795px; background:url('assets/images/flavoer/211231/flavor_img_2.png') center top repeat-x;}
+#flavoer_wrap #area2 .img_6 {position:absolute; top:282px; left:336px; height: 540px; z-index:9; overflow: hidden;}
+/*area3*/
+#flavoer_wrap #area3 {height:795px; z-index:15; background:url('assets/images/flavoer/211231/flavor_img_3.png') center top repeat-x;}
+#flavoer_wrap #area3 .img_1 {position:absolute; top:0; right:10px; margin-top:51px; z-index:9;
+    -webkit-animation: ov_move2 2s infinite;
+    -moz-animation: ov_move2 2s infinite;
+    -o-animation: ov_move2 2s infinite;
+    animation: ov_move2 2s infinite;
+}
+@keyframes ov_move2 {
+    0% {top:-250px;}
+    25% {top:-255px;}
+    50% {top:-250px;}
+    75% {top:-255px;}
+    100% {top:-250px;}
+}
+#flavoer_wrap #area3 .img_2 {position:absolute; right:-13px; top:0; z-index:9; margin-top:-950px;
+    -webkit-animation: ov_move3 2s infinite;
+    -moz-animation: ov_move3 2s infinite;
+    -o-animation: ov_move3 2s infinite;
+    animation: ov_move3 2s infinite;
+}
+@keyframes ov_move3 {
+    0% {top:770px;}
+    25% {top:775px;}
+    50% {top:770px;}
+    75% {top:775px;}
+    100% {top:770px;}
+}
+/*area4*/
+#flavoer_wrap #area4 {height:870px; background:url('assets/images/flavoer/211231/flavor_img_4.png') center top repeat-x;}
+#area4 .view_insta {width:867px; height:380px; margin:388px auto 0;}
+#area4 .view_insta .ins-area .a {width: 170.44px; height: 171.9px;}
+#area4 .view_insta .ins-area {overflow:hidden; height:350px;}
+/*footer*/
+#footer .familysite button {width:100%; height:32px; padding-left:11px; border-radius:5px; border:1px solid #d1cecc; background:transparent url(assets/images/common/family_size_off.png) no-repeat 100% 0; color:#b1ab9f; font-size:11px; text-align:left; -webkit-box-shadow:2px 2px 2px 0px rgba(234,233,232,0.8); -moz-box-shadow:2px 2px 2px 0px rgba(234,233,232,0.8); box-shadow:2px 2px 2px 0px rgba(234,233,232,0.8);}
+</style>
+</head>
+<!-- <body> -->
+<body id="br_menu">
+<article id="wrap" class="br_menu_fom">
+<!-- <header> -->
+<header id="header">
+	<!-- inner_header -->
+	<div class="inner_header">
+		<div class="top_area">
+			<div class="inner">
+				<h1 class="logo">
+                    <!-- <a href=https://www.baskinrobbins.co.kr/> -->  <!-- main으로 전환 -->
+                    <a href="../main.html"><img src="https://www.baskinrobbins.co.kr/assets/images/common/logo_baskinrobbins.png" alt="Baskin Robbins Logo"></a>
+                </h1>
+				<nav class="sns">
+					<ul>
+						<li>
+							<a href="#">
+                                <img src="assets/images/common/icon_facebook.png" alt="FACEBOOK">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/common/icon_twitter.png" alt="TWITTER">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/common/icon_blog.png" alt="BLOG">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/common/icon_instgram.png" alt="INSTAGRAM">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/common/icon_youtube.png" alt="YOUTUBE">
+                            </a>
+                        </li>
+					</ul>
+				</nav>
+				<nav class="etc">
+                    <ul>
+                        <li class="customer">
+                            <a href="#">고객센터</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTACT US</a>
+                        </li>
+                        <li class="search">
+                            <a href="#">search</a>
+                        </li>
+                    </ul>
+                </nav>
+			</div>
+		</div>
+		<div class="menu_area">
+            <div class="inner">
+                <nav class="member">
+                    <ul>
+                        <li class="login">
+                            <a href="#">
+                                <span>LOGIN</span>
+                            </a>
+                        </li>
+                        <li class="join">
+                            <a href="#">
+                                <span>JOIN</span>
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </nav>
+                
+                <nav id="gnb">
+                    <div class="gnb_wrap">
+                        <ul>
+                            <li class="gnb_depth1 gnb_flavor">
+                                <div class="gnb_main">
+                                    <a href="../1page/1page.html">
+                                        <span>FLAVOR OF THE MONTH</span>
+                                    </a>
+                                </div>
+                                <div class="gnb_sub">
+                                    <!-- 이달의 플레이버 배너! -->
+                                    <a href="../1page/1page.html"><img src="assets/images/common/flavor/img_monthly_fom_211231.png" alt="" style="margin-left:37px;"></a>
+                                </div>
+                            </li>
+                            <li class="gnb_depth1 gnb_menu">
+                                <div class="gnb_main">
+                                    <a href="#">
+                                        <span>MENU</span>
+                                    </a>
+                                </div>
+                                <ul class="gnb_sub">
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>아이스크림</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>아이스크림케이크</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>음료</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>커피</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>디저트</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb_depth1 gnb_nutrition">
+                                <div class="gnb_main">
+                                    <a href="../2page/2page.html">
+                                        <span>영양성분 및 알레르기</span>
+                                    </a>
+                                </div>
+                                <ul class="gnb_sub">
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>아이스크림</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>음료</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>커피</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                            </li>
+                            <li class="gnb_depth1 gnb_event">
+                                <div class="gnb_main">
+                                    <a href="../3page/3page.html">
+                                        <span>EVENT</span>
+                                    </a>
+                                </div>
+                                <ul class="gnb_sub">
+                                    <li class="gnb_depth2">
+                                        <a href="../3page/3page.html">
+                                            <span>진행중이벤트</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>당첨자발표</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb_depth1 gnb_store">
+                                <div class="gnb_main">
+                                    <a href="#">
+                                        <span>STORE</span>
+                                    </a>
+                                </div>
+                                <ul class="gnb_sub">
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>매장찾기</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>고객센터</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>단체주문</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="gnb_depth1 gnb_about">
+                                <div class="gnb_main">
+                                    <a href="#">
+                                        <span>ABOUT</span>
+                                    </a>
+                                </div>
+                                <ul class="gnb_sub">
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>공지사항</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>보도자료</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>채용정보</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>점포개설문의</span>
+                                        </a>
+                                    </li>
+                                    <li class="gnb_depth2">
+                                        <a href="#">
+                                            <span>Contact Us</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gnb_bg"><div></div></div>
+                </nav>
+            </div>
+        </div>
+	</div>
+</header>
+	<article id="flavoer_wrap">
+		<div class="move">
+			<section id="area1">
+                <nav id="logger">
+                <ul>
+                    <li>
+                        <a href='#area1' class='on btn1'>
+                            <img src='assets/images/flavoer/211231/nav_01_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area2' class='btn2'>
+                            <img src='assets/images/flavoer/211231/nav_02_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area3' class='btn3'>
+                            <img src='assets/images/flavoer/211231/nav_03_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area4' class='btn4'>
+                            <img src='assets/images/flavoer/211231/nav_04_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+				<div class='in_wrap'>
+                    <span class='img_2'>
+                        <img src='assets/images/flavoer/211231/ice_img.png' alt=''>
+                    </span>
+                    <span class="material">
+                        <img src='assets/images/flavoer/211231/ice_material.png' alt=''>
+                    </span>
+                    <span class='img_3'>
+                        <img src='assets/images/flavoer/211231/side_img_01.png' alt=''>
+                    </span>
+                </div>
+			</section>
+			<section id='area2'><nav id="logger">
+                <ul>
+                    <li>
+                        <a href='#area1' class='btn1'>
+                            <img src='assets/images/flavoer/211231/nav_01_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area2' class='on btn2'>
+                            <img src='assets/images/flavoer/211231/nav_02_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area3' class='btn3'>
+                            <img src='assets/images/flavoer/211231/nav_03_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area4' class='btn4'>
+                            <img src='assets/images/flavoer/211231/nav_04_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+                <div class='in_wrap'>
+                    <span class="img_6">
+                        <img src="assets/images/flavoer/211231/ice_img.png" alt="">
+                    </span>
+                    <span class='img_1'>
+                    <img src='assets/images/flavoer/211231/fom_25.png' alt=''>
+                    </span>
+                </div>
+            </section>
+            <section id='area3'>
+                <nav id="logger">
+                <ul>
+                    <li>
+                        <a href='#area1' class='btn1'>
+                            <img src='assets/images/flavoer/211231/nav_01_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area2' class='btn2'>
+                            <img src='assets/images/flavoer/211231/nav_02_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area3' class='on btn3'>
+                            <img src='assets/images/flavoer/211231/nav_03_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area4' class='btn4'>
+                            <img src='assets/images/flavoer/211231/nav_04_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+                <div class='in_wrap'>
+                </div>
+            </section>
+            <section id='area4'>
+                <nav id="logger">
+                <ul>
+                    <li>
+                        <a href='#area1' class='btn1'>
+                            <img src='assets/images/flavoer/211231/nav_01_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area2' class='btn2'>
+                            <img src='assets/images/flavoer/211231/nav_02_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area3' class='btn3'>
+                            <img src='assets/images/flavoer/211231/nav_03_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#area4' class='on btn4'>
+                            <img src='assets/images/flavoer/211231/nav_04_off.png' alt='' class='icon'>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+                <div class='in_wrap'>
+                    <!-- 인스타그램 -->
+                    <article class="view_insta">
+                        <div class="ins-area">
+                            <a class="insta1">
+                                    <img src='assets/images/instagram/insta1.jpeg' style="width: 170.44px; height:171px;">
+                                </a>
+                                <a class="insta2">
+                                    <img src='assets/images/instagram/insta2.jpeg' style="width: 170.44px; height:171px;">
+                                </a> 
+                                <a class="insta3">
+                                    <img src='assets/images/instagram/insta3.jpeg' style="width: 170.44px; height:171px;">
+                                </a> 
+                                <a class="insta4">
+                                    <img src='assets/images/instagram/insta4.jpeg' style="width: 170.44px; height:171px;">
+                                </a>
+                                <a class="insta5">
+                                    <img src='assets/images/instagram/insta5.jpeg' style="width: 170.44px; height:171px;">
+                                </a> 
+                                <a class="insta6">
+                                    <img src='assets/images/instagram/insta6.jpeg' style="width: 170.44px; height:171px;">
+                                </a> 
+                                <a class="insta7">
+                                    <img src='assets/images/instagram/insta7.jpeg' style="width: 170.44px; height:171px;">
+                                </a>
+                                <a class="insta8">
+                                    <img src='assets/images/instagram/insta8.jpeg' style="width: 170.44px; height:171px;">
+                                </a>
+                                <a class="insta9">
+                                    <img src='assets/images/instagram/insta9.jpeg' style="width: 170.44px; height:171px;">
+                                </a>
+                                <a class="insta10">
+                                    <img src='assets/images/instagram/insta10.jpeg' style="width: 170.44px; height:171px;">
+                                </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+		</div>
+	</article>
+
+	<!-- <footer> -->
+	<footer id="footer">
+	<div class="inner_footer">
+		<nav class="policy">
+			<ul>
+                <li style="width:12%;">
+                    <a href="#">
+                        점포개설문의
+                    </a>
+                </li>
+                <li style="width:12%;">
+                    <a href="#">
+                        채용문의
+                    </a>
+                </li>
+                <li style="width:12%;">
+                    <a href="#">윤리신고센터</a>
+                </li>
+                <li style="width:12%;">
+                    <a href="#">
+                        이용약관
+                    </a>
+                </li>
+                <li class="privacy" style="width:15%;">
+                    <a href="#">
+                        개인정보처리방침
+                    </a>
+                </li>
+                <li style="width:20%;">
+                    <a href="#">
+                        영상정보처리기기운영관리방침
+                    </a>
+                </li>
+                <li style="width:17%;">
+                    <a href="#">
+                        거래희망회사 사전등록
+                    </a>
+                </li>
+            </ul>
+		</nav>
+		<div class="brand_family">
+			<div class="inner">
+				<nav class="brand">
+					<ul>
+						<li class="li_1">
+                            <a href="#">
+                                <img src="assets/images/common/btn_happypoint.png" alt="HAPPY POINT">
+                            </a>
+                        </li>
+                        <li class="li_2">
+                            <a href="#">
+                                <img src="assets/images/common/btn_happymarket.png" alt="HAPPY MARKET">
+                            </a>
+                        </li>
+                        <li class="li_3">
+                            <a href="#">
+                                <img src="assets/images/common/btn_spc_story.png" alt="SPC그룹 사회공헌활동 SPC 행복한 이야기">
+                            </a>
+                        </li>
+                        <li class="li_4">
+                            <a href="#">
+                                <img src="assets/images/common/btn_norton.gif" alt="Norton SECURED">
+                            </a>
+                        </li>
+                        <li class="li_5">
+                            <a href="#">
+                                <img src="assets/images/common/btn_ccm.gif" alt="소비자중심경영 인증제도">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/common/btn_ksa.png" alt="국가품질상 - KSA 한국표준협회">
+                            </a>
+                        </li>	
+					</ul>
+				</nav>
+				<nav class="familysite">
+					<button type="button">FAMILY SITE</button>
+				</nav>
+			</div>
+		</div>
+		<div class="info">
+			<h1 class="logo">
+				<img src="assets/images/common/footer_logo.png" alt="baskin robbins">
+			</h1>
+			<div class="box_1">
+                <p>사업자 등록번호 : 303-81-09535</p>
+                <p>비알코리아(주) 대표이사 도세호</p>
+                <address class="address">
+                    서울특별시 서초구 남부순환로 2620(양재동 11-149번지)
+                </address>
+            </div>
+            <div class="box_2">
+                <p>TEL : 080-555-3131</p>
+                <p>개인정보관리책임자 : 김경우</p>
+            </div>
+            <p class="copyright">
+                Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.
+            </p>
+		</div>
+	</div>
+	</footer>
+</article>
+</body>
+</html>

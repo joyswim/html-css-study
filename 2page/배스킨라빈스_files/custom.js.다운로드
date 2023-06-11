@@ -1,0 +1,11 @@
+$(Embed).bind('attracttEvent', function(event, param) {
+	var key = param['key'];
+	var value = param['value'];
+	var requestData = param['requestData'];
+	
+    switch (key) {
+    case 'dataInitComplete':
+		$('body').attr('mobile', Utils.isMobile());
+    	break;
+    }
+});

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배스킨라빈스</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" href="assets/css/baskinrobbins.css" media="all" type="text/css"/>
+<!-- Stick 불러오기 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+<link rel="shortcut icon" href="http://www.baskinrobbins.co.kr/assets/images/common/favicon.ico">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+<header id="header">
+	<div class="inner_header">
+		<div class="top_area">
+			<div class="top_inner">
+				<h1 class="logo">
+					<a href="main.html">
+						<img src="media/logo.png" alt="로고">
+					</a>
+				</h1>
+				<nav class="sns">
+					<ul>
+						<li>
+							<a href="#"><img src="media/icon_facebook.png" alt="페이스북"></a>
+						</li>
+						<li>
+							<a href="#"><img src="media/icon_twitter.png" alt="트위터"></a>
+						</li>
+						<li>
+							<a href="#"><img src="media/icon_blog.png" alt="블로그"></a>
+						</li>
+						<li>
+							<a href="#"><img src="media/icon_instgram.png" alt="인스타그램"></a>
+						</li>
+						<li>
+							<a href="#"><img src="media/icon_youtube.png" alt="유튜브"></a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="etc">
+					<ul>
+						<li>
+							<a href="#">고객센터</a>
+						</li>
+						<li class="contact">
+							<a href="#">CONTACT US</a>
+						</li>
+						<li class="search">
+							<a href="#">
+								<img src="media/icon_search.png" alt="검색버튼">
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		<div class="menu_area">
+			<div class="menu_inner">
+				<div class="member">
+					<ul>
+						<li class="login">
+							<a href="#">
+								<img src="media/login.png">
+							</a>
+						</li>
+						<li class="join">
+							<a href="#">
+								<img src="media/join.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<nav id="gnb">
+					<div class="gnb_wrap">
+						<ul>
+							<li class="gnb_depth1" style="display:none;">
+								<div id="bts" style="display:block; width: 160px; float: left; padding: 0 40px; line-height: 46px;">
+									<a href="http://www.baskinrobbins.co.kr/event/dccomics/event.php">
+										<img style="width: 100%; vertical-align: middle;" src="./배스킨라빈스_files/gnb_dccomics.jpg">
+									</a>
+								</div>
+							</li>
+
+							<li class="gnb_depth1 gnb_flavor">
+								<div class="gnb_main">
+									<a href="1page/1page.html">
+										<span><img src="media/flavorofthemonth.png" alt="FLAVOR OF THE MONTH"></span>
+									</a>
+								</div>
+								<div class="gnb_sub">
+									<!-- 이달의 플레이버 배너! -->
+									<a href="1page/1page.html">
+										<img src="media/img_monthly_fom_211231.png" alt="플레이버배너">
+									</a>
+								</div>
+							</li>
+							<li class="gnb_depth1 gnb_menu">
+								<div class="gnb_main">
+									<a href="http://www.baskinrobbins.co.kr/menu/main.php">
+										<span><img src="media/menu.png" alt="MENU"></span>
+									</a>
+								</div>
+								<ul class="gnb_sub">
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>아이스크림</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>아이스크림케이크</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>음료</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>커피</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>디저트</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="gnb_depth1 gnb_nutrition">
+								<div class="gnb_main">
+									<a href="2page/2page.html">
+										<span><img src="media/nutrition.png" alt="영양성분 및 알레르기"></span>
+									</a>
+								</div>
+								<ul class="gnb_sub">
+ 									<li class="gnb_depth2">
+										<a href="#">
+											<span>아이스크림</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>음료</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>커피</span>
+										</a>
+									</li> 
+								</ul>
+							</li>
+							<li class="gnb_depth1 gnb_event">
+								<div class="gnb_main">
+									<a href="3page/3page.html">
+										<span><img src="media/event.png" alt="EVENT"></span>
+									</a>
+								</div>
+								<ul class="gnb_sub">
+									<li class="gnb_depth2">
+										<a href="3page/3page.html">
+											<span>진행중이벤트</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>당첨자발표</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="gnb_depth1 gnb_store">
+								<div class="gnb_main">
+									<a href="#">
+										<span><img src="media/store.png" alt="STORE"></span>
+									</a>
+								</div>
+								<ul class="gnb_sub">
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>매장찾기</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>고객센터</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>단체주문</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="gnb_depth1 gnb_about">
+								<div class="gnb_main">
+									<a href="#">
+										<span><img src="media/about.png" alt="ABOUT"></span>
+									</a>
+								</div>
+								<ul class="gnb_sub">
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>공지사항</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>보도자료</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>채용정보</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>점포개설문의</span>
+										</a>
+									</li>
+									<li class="gnb_depth2">
+										<a href="#">
+											<span>Contact Us</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="gnb_bg">
+						<div></div>
+					</div>					
+				</nav>
+			</div>
+		</div>
+		</div>
+	</div>
+</header>
+
+<article id="content">
+	<div class="banner_area">
+		<div class="top_banner">
+			<a href="#">flavor of the month</a>
+		</div>
+		<div class="banner_slide">
+			<div class="swipe">
+			  <div class="swipe_wrap">
+			  	<div class="banner1"><a href="#"><img src="./media/slide1_112888.jpg"></a></div>
+			  	<div class="banner2"><a href="#"><img src="./media/slide2_EEE2D5.png"></a></div>
+			  	<div class="banner3"><a href="#"><img src="./media/slide3_FC902E.png"></a></div>
+			  	<div class="banner4"><a href="#"><img src="./media/slide4_FFEA4B.png"></a></div>
+			  </div>
+		    <script type="text/javascript">
+			  	$('.banner_slide .swipe_wrap').slick({
+			  		autoplay: true,
+			  		autoplaySpeed: 2500,
+			  		infinite: true,
+			  		dots: true,
+			  		draggable: false,
+			  	});
+		    </script>
+			</div>
+		</div>
+	</div>
+	<section class="br_event">
+		<h3 class="title"><img src="media/h_event.png"></h3>
+		<div class="event_list">
+			<div class="swipe">
+				<ul class="swipe_wrap">
+					<li class="banner1">
+						<a href="#">
+							<figure>
+								<img src="media/banner_delivery.png" alt="해피오더">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">해피오더 딜리버리로 간편하게 주문하세요!</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner2">
+						<a href="#">
+							<figure>
+								<img src="media/banner_delivery_bm.png" alt="배달의 민족">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">배달의 민족에서 빠르게 주문하세요!</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner3">
+						<a href="#">
+							<figure>
+								<img src="media/banner_delivery_ygy.png" alt="요기요">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">요기요에서 손쉽게 주문하세요!</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner4">
+						<a href="#">
+							<figure>
+								<img src="media/banner_delivery_kakao.png" alt="카카오톡">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">카카오톡 주문하기에서 편리하게 주문하세요!</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner5">
+						<a href="#">
+							<figure>
+								<img src="media/bannner_kt.jpg">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">KT멤버십 고객이라면 누구나 파인트 30% 할인!</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner6">
+						<a href="#">
+							<figure><img src="media/bannner_card.png"></figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">제휴 할인 카드 혜택 안내</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner7">
+						<a href="#">
+							<figure>
+								<img src="media/bannner_font.png">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">2018 한글날 기념 무료 글꼴 공개! 배스킨라빈스체</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner8">
+						<a href="#">
+							<figure>
+								<img src="media/bannner_cup.png">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">1회용 컵 사용 줄이기 안내</span>
+							<span class="period">상시진행</span>
+						</a>
+					</li>
+					<li class="banner9">
+						<a href="#">
+							<figure>
+								<img src="media/banner_praise_2021-3.png">
+							</figure>
+							<span class="type"><img src="media/stit_store.gif"></span>
+							<span class="title">2021년 3분기 고객 BEST 칭찬점포 안내</span>
+						</a>
+					</li>
+					<li class="banner10"></li>
+					<li class="banner11"></li>	
+					<li class="banner12"></li>		
+				</ul>
+				<script>
+					$('.event_list .swipe_wrap').slick({
+					  dots: true,
+					  slidesToShow: 4,
+					  slidesToScroll: 4,
+  				      infinite: false,
+					});
+				</script>
+			</div>
+		</div>
+		<div class="dslide">
+			<div></div>
+			<div></div>	
+		</div>
+		</div>
+	</section>
+
+	<section class="br_menu">
+		<h3 class="title"><img src="media/h_menu.png" alt="배경 이미지"></h3>
+		<div class="menu_list">
+			<div class="icecream">
+				<a href="/menu/list.php?top=A"></a>
+			</div>
+			<div class="icecreamcake">
+				<a href="/menu/list.php?top=B"></a>
+			</div>
+			<div class="beverage">
+				<a href="/menu/list.php?top=C"></a>
+			</div>
+			<div class="coffee">
+				<a href="/menu/list.php?top=D"></a>
+			</div>
+			<div class="dessert">
+				<a href="/menu/list.php?top=E"></a>
+			</div>
+			<div class="gift">
+				<a href="#"></a>
+			</div>
+		</div>
+	</section>
+
+	<div class="store_delivery">
+		<section class="store">
+			<h3 class="title">
+					<img src="media/h_store.png">
+			</h3>
+			<div>
+				<a href="#">
+					<img src="media/img_store.jpg">
+				</a>
+			</div>
+		</section>
+		<section class="order">
+			<h3 class="title"><img src="media/h_happyorder_delivery.png"></h3>	
+			<div>
+				<a href="#">
+					<img src="media/img_happyorder_delivery.png">
+				</a>
+			</div>
+		</section>
+	</div>
+	<section class="snsbox">
+		<h3 class="title">
+			<img src="media/h_sns.png">
+		</h3>
+		<div class="sns">
+			<ul>
+				<li>
+					<a href="#">
+						<img src="media/sns_facebook.png" alt="페이스북">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="media/sns_twitter.png" alt="트위터">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="media/sns_blog.png" alt="블로그">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="media/sns_instagram.png" alt="인스타그램">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="media/sns_youtube.png" alt="유튜브">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<h4 class="title" alt="baskinrobbins_instagram">
+			<img src="media/tit_sns.png">
+		</h4>
+		<div class="container">
+			<div class="contents">
+				<ul>
+					<li class="thumb">
+						<a href="#"><img src="media/img01.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img02.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img03.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img04.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img05.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img06.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img07.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img08.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img09.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img10.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img11.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img12.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img13.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img14.jpg">
+						</a>
+					</li>
+					<li class="thumb">
+						<a href="#"><img src="media/img15.jpg">
+						</a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</section>
+</article>
+<footer id="footer">
+	<div class="inner_footer">
+		<nav class="policy">
+			<ul>
+				<li style="width:12%;">
+					<a href="#">점포개설문의
+					</a>
+				</li>
+				<li style="width:12%;">
+					<a href="#">채용문의
+					</a>
+				</li>
+				<li style="width:12%;">
+					<a href="#">윤리신고센터
+					</a>
+				</li>
+				<li style="width:12%;">
+					<a href="#">이용약관
+					</a>
+				</li>
+				<li class="privacy" style="width:15%;">
+					<a href="#">
+						<span>개인정보처리방침</span>
+					</a>
+				</li>
+				<li style="width:20%;">
+					<a href="#">영상정보처리기기운영관리방침
+					</a>
+				</li>
+				<li style="width:17%;">
+					<a href="#">거래희망회사 사전등록
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="brand_family">
+			<div class="footer_inner">
+				<nav class="brand">
+					<ul>
+						<li class="list1">
+							<a href="#">
+								<img src="media/btn_happypoint.png">
+							</a>
+						</li>
+						<li class="list2">
+							<a href="#">
+								<img src="media/btn_happymarket.png">
+							</a>
+						</li>
+						<li class="list3">
+							<a href="#">
+								<img src="media/btn_spc_story.png">
+							</a>
+						</li>
+						<li class="list4">
+							<a href="#">
+								<img src="media/btn_norton.gif">
+							</a>
+						</li>
+						<li class="list5">
+							<a href="#">
+								<img src="media/btn_ccm.gif">
+							</a>
+						</li>
+						<li class="list6">
+							<a href="#">
+								<img src="media/btn_ksa.png">
+							</a>
+						</li>
+						<li>
+							<nav class="familysite">
+								<button type="button">FAMILY SITE</button>
+							</nav>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="info">
+			<div class="logo">
+				<img src="media/footer_logo.png">
+			</div>
+			<div class="box1">
+				<p>사업자 등록번호 : 303-81-09535</p>
+				<p>비알코리아(주) 대표이사 도세호</p>
+				<address class="address">서울특별시 서초구 남부순환로 2620(양재동 11-149번지)</address>
+			</div>
+			<div class="box2">
+				<p>TEL : 080-555-3131</p>
+				<p>개인정보관리책임자 : 김경우</p>
+			</div>
+			<p class="copyright">Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.</p>	
+		</div>
+	</div>
+</footer>
+</body>
+</html>
